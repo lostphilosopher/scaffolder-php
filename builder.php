@@ -14,13 +14,12 @@ class builder
      *
      * @return string
      */
-    public function getTemplate() {
-       // if (! $this->type || ! file_exists($this->templatesDir . $this->type)) {
-       //     return false;
-       // } 
+    public function getTemplate($type) {
+       if (! $this->templatesDir || ! $this->fileName || ! $type) {
+            return false;
+       } 
 
-        $contents = file_get_contents($this->templatesDir . $this->type . '.txt');
-echo $contents;
+        $contents = file_get_contents($this->templatesDir . $type . '.txt');
         $template = str_replace('%%NAME%%', $this->fileName, $contents);
 
         return $template;
@@ -37,12 +36,17 @@ echo $contents;
         }    
 
         $pathsJson  = file_get_contents('paths.json');
-        $pathsArray = json_decode($pathsJson);
+        $pathsArray = json_decode($pathsJson, true);
+        
         // @todo optimize
-        foreach ($pathsArray as $type => $path){
-            if ($this->type == $type) {
-                return $path . $this->fileName;
-            }               
+        $return = array();
+        foreach ($pathsArray as $types => $paths){
+            if ($this->type == $types) {
+                foreach ($paths as $type => $path) {
+                    $return[$type] = $path . $this->fileName;
+                }   
+                return $return;
+            }            
         }
 
         return false;

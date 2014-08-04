@@ -34,15 +34,13 @@ class writer
      */ 
     public function make () {
         $builder = new builder($this->fileName, $this->type);
-
-        echo 'FN: '.$this->fileName.
-             ' T: '.$this->type.
-             ' BFP: '.$builder->getFilePath().
-             ' BT: '.$builder->getTemplate();
-
+        
         // Write the file
-        file_put_contents($builder->getFilePath(), $builder->getTemplate());        
-    
+        var_dump($builder->getFilePath());
+        foreach ($builder->getFilePath() as $type => $path) {
+            echo 'Printing: ' . $builder->getTemplate($type) . ' of type ' . $type . ' to ' . $path . PHP_EOL;
+            file_put_contents($path, $builder->getTemplate($type));        
+        }
         return 'Success!';
     }
 }
