@@ -1,8 +1,8 @@
 {
     "controller": {
-	"controller": "controller/",
-	"factory": "factory/"
+	"controller": "demo-app/controller/",
+	"factory": "demo-app/factory/"
     },
-    "model": "model/",
-    "view": "view/"
+    "model": "demo-app/model/",
+    "view": "demo-app/view/"
 }
