@@ -1,1 +1,9 @@
-I AM A CONTROLLER NAMED %%NAME%% CONTROLLER
+<?php 
+
+class %%NAME%%Controller {
+
+    public function __contruct () {
+	// Contructor
+    }
+
+}
