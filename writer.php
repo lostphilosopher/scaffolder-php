@@ -36,9 +36,7 @@ class writer
         $builder = new builder($this->fileName, $this->type);
         
         // Write the file
-        var_dump($builder->getFilePath());
         foreach ($builder->getFilePath() as $type => $path) {
-            echo 'Printing: ' . $builder->getTemplate($type) . ' of type ' . $type . ' to ' . $path . PHP_EOL;
             file_put_contents($path, $builder->getTemplate($type));        
         }
         return 'Success!';

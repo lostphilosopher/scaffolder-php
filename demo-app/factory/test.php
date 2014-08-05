@@ -1,1 +1,8 @@
-I AM A FACTORY NAMED test.php FACTORY
+<?php
+class test.phpFactory
+{
+    public static function build() {
+    
+    }
+}
+?>
