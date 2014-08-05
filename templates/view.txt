@@ -1,1 +1,7 @@
-I AM A VIEW NAMED %%NAME%% VIEW
+<html>
+    <head>
+    </head>
+    <body>
+        %%NAME%% View
+    </body>
+</html>

@@ -1,1 +1,17 @@
-I AM A MODEL NAMED %%NAME%% MODEL
+<?php
+
+class %%NAME%%Model {
+
+    public function create() {
+
+    }
+
+    public function edit() {
+
+    }
+
+    public function delete() {
+
+    }
+}
+?>

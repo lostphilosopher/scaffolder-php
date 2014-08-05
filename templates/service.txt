@@ -1,1 +1,9 @@
-I AM A SERVICE NAMED %%NAME%% SERVICE
+<?php
+
+class %%NAME%%Service
+{
+    public function __contruct() {
+    }
+}
+
+?>

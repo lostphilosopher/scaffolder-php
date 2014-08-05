@@ -1,1 +1,8 @@
-I AM A FACTORY NAMED %%NAME%% FACTORY
+<?php
+class %%NAME%%Factory
+{
+    public static function build() {
+    
+    }
+}
+?>
