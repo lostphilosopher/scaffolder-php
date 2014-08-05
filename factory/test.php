@@ -1,1 +1,0 @@
-I AM A FACTORY NAMED test.php FACTORY
